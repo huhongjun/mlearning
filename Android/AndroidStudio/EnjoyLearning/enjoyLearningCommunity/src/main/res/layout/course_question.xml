@@ -1,0 +1,55 @@
+<!-- com.zj.support.widget.swipeback.SwipeBackRelativeLayout -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    swipe:onSwipeFinish="onSwipeFinish" >
+
+    <!-- 标题栏 -->
+
+    <include
+        android:id="@+id/course_exam_titlebar"
+        layout="@layout/titlebar_cancel" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/course_exam_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_exam_titlebar"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+    <!-- 初始化加载中 -->
+
+    <include
+        android:id="@+id/course_question_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_exam_titlebar"
+        layout="@layout/loading"
+        android:visibility="gone" >
+    </include>
+
+    <!-- 没数据 -->
+
+    <include
+        android:id="@+id/course_question_rl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_exam_titlebar"
+        layout="@layout/list_empty"
+        android:visibility="gone" />
+
+    <!-- 提交时加载中 -->
+    
+    <include
+        android:id="@+id/course_question_ll_commit_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_exam_titlebar"
+        layout="@layout/progress" 
+        android:visibility="gone"/>
+
+</RelativeLayout>

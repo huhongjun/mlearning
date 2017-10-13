@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.support.widget.swipeback.SwipeBackRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    swipe:onSwipeFinish="onSwipeFinish" >
+
+    <include
+        android:id="@+id/asks_list_find_l"
+        layout="@layout/titlebar_search"
+        android:visibility="gone" />
+
+    <com.zj.support.widget.refresh.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/asks_list_listview"
+        style="@style/list_refresh_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/asks_list_find_l"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/list_loading_zj_logo"
+        ptr:ptrHeaderBackground="@color/list_pull_refresh_bg"
+        ptr:ptrHeaderTextAppearance="@dimen/list_second_level"
+        ptr:ptrHeaderTextColor="@color/list_pull_refresh_tv"
+        ptr:ptrMode="both" />
+
+</com.zj.support.widget.swipeback.SwipeBackRelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <com.zj.support.widget.refresh.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/certificate_list_listview"
+        style="@style/list_refresh_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/list_loading_zj_logo"
+        ptr:ptrHeaderBackground="@color/list_pull_refresh_bg"
+        ptr:ptrHeaderTextAppearance="@dimen/list_second_level"
+        ptr:ptrHeaderTextColor="@color/list_pull_refresh_tv"
+        ptr:ptrMode="both" />
+
+    <!-- 初始化加载中 -->
+
+    <include
+        android:id="@+id/certificate_list_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading"
+        android:visibility="gone" >
+    </include>
+
+</RelativeLayout>

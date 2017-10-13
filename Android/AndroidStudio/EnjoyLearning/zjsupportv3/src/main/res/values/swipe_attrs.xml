@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SwipeBack">
+        <attr name="onSwipeFinish" format="string"></attr>
+        <attr name="enableSwipe" format="boolean"></attr>
+    </declare-styleable>
+
+</resources>

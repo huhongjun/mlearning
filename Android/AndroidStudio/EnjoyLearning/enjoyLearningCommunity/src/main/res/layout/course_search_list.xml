@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <include
+        android:id="@+id/course_searcg_list_tl_titlebar"
+        layout="@layout/titlebar_search" />
+
+    <com.zj.support.widget.refresh.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/course_search_list_listview"
+        style="@style/list_refresh_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_searcg_list_tl_titlebar"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/list_loading_zj_logo"
+        ptr:ptrHeaderBackground="@color/list_pull_refresh_bg"
+        ptr:ptrHeaderTextAppearance="@dimen/list_second_level"
+        ptr:ptrHeaderTextColor="@color/list_pull_refresh_tv"
+        ptr:ptrMode="disabled" />
+    
+   <!-- 数据为空时显示 -->
+
+    <RelativeLayout
+        android:id="@+id/course_search_list_empty_rl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_searcg_list_tl_titlebar"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/list_empty_iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/list_empty_icon" />
+
+        <TextView
+            android:id="@+id/list_empty_tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_empty_iv_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/course_search_no_results"
+            android:textColor="@color/tips_color"
+            android:textSize="@dimen/list_first_level" />
+    </RelativeLayout>
+
+</RelativeLayout>

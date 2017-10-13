@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.learning.view.course.CourseItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_list_item_selector" >
+
+    <FrameLayout
+        android:id="@+id/course_list_item_fl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 缩略图 -->
+
+        <com.zj.support.widget.ZjImageView
+            android:id="@+id/course_list_item_iv_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/list_default" >
+        </com.zj.support.widget.ZjImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_translucent_bg"
+            android:paddingBottom="@dimen/margin_5"
+            android:paddingTop="@dimen/margin_5" >
+
+            <TextView
+                android:id="@+id/course_list_item_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_toLeftOf="@+id/course_list_item_tv_score"
+                android:singleLine="true"
+                android:text="如何学好Android开发之精品课程和健康就看了"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_first_level" />
+
+            <TextView
+                android:id="@+id/course_list_item_tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_16"
+                android:singleLine="true"
+                android:text="评分：9.4"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_second_level" />
+        </RelativeLayout>
+
+        <!-- 费用 -->
+
+        <TextView
+            android:id="@+id/course_list_item_tv_coast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:background="@color/main_color"
+            android:paddingBottom="@dimen/margin_5"
+            android:paddingLeft="@dimen/margin_8"
+            android:paddingRight="@dimen/margin_8"
+            android:paddingTop="@dimen/margin_5"
+            android:text="@string/course_free"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/list_second_level" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/course_list_item_ll_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/course_list_item_fl_above"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/course_list_item_tv_learn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/course_learn_count_icon"
+                android:drawablePadding="@dimen/margin_8"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:singleLine="true"
+                android:text="学过（19099）"
+                android:textColor="@color/main_color" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/divider_width"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/course_list_item_tv_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/course_focus_count_icon"
+                android:drawablePadding="@dimen/margin_8"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="关注（222222）"
+                android:textColor="@color/main_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_width"
+        android:layout_below="@+id/course_list_item_ll_middle"
+        android:background="@color/divider_color" />
+
+</com.zj.learning.view.course.CourseItemView>

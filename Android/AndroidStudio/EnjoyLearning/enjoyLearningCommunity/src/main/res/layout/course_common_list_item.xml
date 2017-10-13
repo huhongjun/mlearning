@@ -1,0 +1,54 @@
+<com.zj.learning.view.course.ResourceItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/margin_8"
+    android:paddingRight="@dimen/margin_8" >
+
+    <include
+        android:id="@+id/course_common_list_item_fl_left"
+        layout="@layout/common_list_item_left" />
+
+    <RelativeLayout
+        android:id="@+id/course_common_list_item_rl_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/margin_8"
+        android:layout_weight="1" >
+
+        <!-- 标题-名字 -->
+
+        <TextView
+            android:id="@+id/course_common_list_item_tv_name"
+            style="@style/common_list_tv_first_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="第一节   Android小计驾驾驾快快快解决" />
+
+        <!-- 二级标题-信息 -->
+
+        <TextView
+            android:id="@+id/course_common_list_item_tv_below"
+            style="@style/common_list_tv_second_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/course_common_list_item_tv_name"
+            android:layout_below="@+id/course_common_list_item_tv_name"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="1道单选，2道多选接口即可家刻录机和健康看见" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/course_common_list_item_btn_right"
+        style="@style/common_btn_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:focusable="false"
+        android:onClick="onClickRight"
+        android:text="@string/course_learn_start" />
+
+</com.zj.learning.view.course.ResourceItemView>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!-- com.zj.support.widget.swipeback.SwipeBackRelativeLayout -->
+<com.zj.support.widget.swipeback.SwipeBackRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    swipe:onSwipeFinish="onSwipeFinish" >
+
+    <!-- 标题栏 -->
+
+    <include
+        android:id="@+id/course_review_add_titlebar"
+        layout="@layout/titlebar_cancel" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_review_add_titlebar"
+        android:padding="@dimen/margin_16"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- 知识量 -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/detail_title_second_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_review_knowledge_detail" />
+
+                    <!-- 评分 -->
+
+                    <RatingBar
+                        android:id="@+id/course_review_add_rbar_knowledge"
+                        style="@style/rating_bar_style_gray_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_8" />
+
+                    <TextView
+                        style="@style/tips_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_review_knowledge_tips" />
+                </TableRow>
+
+                <!-- 趣味性 -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8" >
+
+                    <TextView
+                        style="@style/detail_title_second_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_review_funny_detail" />
+
+                    <!-- 评分 -->
+
+                    <RatingBar
+                        android:id="@+id/course_review_add_rbar_funny"
+                        style="@style/rating_bar_style_gray_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_8" />
+
+                    <TextView
+                        style="@style/tips_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_review_funny_tips" />
+                </TableRow>
+
+                <!-- 课程设计 -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8" >
+
+                    <TextView
+                        style="@style/detail_title_second_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_review_design_detail" />
+
+                    <!-- 评分 -->
+
+                    <RatingBar
+                        android:id="@+id/course_review_add_rbar_design"
+                        style="@style/rating_bar_style_gray_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_8" />
+
+                    <TextView
+                        style="@style/tips_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_review_design_tips" />
+                </TableRow>
+            </TableLayout>
+
+            <!-- 评价人状态 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8" >
+
+                <TextView
+                    style="@style/detail_title_second_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/course_review_status" />
+
+                <RadioGroup
+                    android:id="@+id/course_review_add_rgroup_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/course_review_add_rBtn_status_ing"
+                        style="@style/course_review_add_status_rBtn_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_review_status_ing" />
+
+                    <RadioButton
+                        android:id="@+id/course_review_add_rBtn_status_complete"
+                        style="@style/course_review_add_status_rBtn_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_review_status_complete" />
+
+                    <RadioButton
+                        android:id="@+id/course_review_add_rBtn_status_giveup"
+                        style="@style/course_review_add_status_rBtn_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_review_status_giveup" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- 评价内容 -->
+
+            <EditText
+                android:id="@+id/course_review_add_et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@drawable/common_et_bg_selector"
+                android:gravity="top"
+                android:hint="@string/course_review_et_hint"
+                android:maxLength="1000"
+                android:minLines="4"
+                android:padding="@dimen/margin_8"
+                android:textColor="@color/detail_black_color"
+                android:textColorHint="@color/detail_gray_color"
+                android:textSize="@dimen/input_level" />
+
+            <!-- 提示 -->
+
+            <TextView
+                style="@style/tips_tv_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:singleLine="false"
+                android:text="@string/course_review_et_tips" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 提交时 -->
+    <include
+        android:id="@+id/course_review_add_ll_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/progress"
+        android:visibility="gone"/>
+
+</com.zj.support.widget.swipeback.SwipeBackRelativeLayout>

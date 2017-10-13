@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/blackColor" >
+
+    <SurfaceView
+        android:id="@+id/video_view_surface"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" >
+    </SurfaceView>
+
+    <!-- 顶部栏 -->
+
+    <RelativeLayout
+        android:id="@+id/video_view_rl_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@drawable/video_titlebar_translucent_bg"
+        android:gravity="center_vertical" >
+
+        <!-- 返回 -->
+
+        <ImageButton
+            android:id="@+id/video_view_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back"
+            android:onClick="onBackBtnClick" />
+
+        <!-- 文件名 -->
+
+        <TextView
+            android:id="@+id/video_view_tv_filename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/whiteColor"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!-- 底部栏 -->
+
+    <LinearLayout
+        android:id="@+id/video_view_ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/video_bottombar_translucent_bg"
+        android:orientation="horizontal" >
+
+        <!-- 播放/暂停 -->
+
+        <ImageButton
+            android:id="@+id/video_view_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:contentDescription="@string/mediacontroller_play_pause"
+            android:onClick="onPlayPauseClick"
+            android:src="@drawable/video_play_selector" />
+
+        <!-- 进度条 -->
+
+        <SeekBar
+            android:id="@+id/video_view_seekbar"
+            style="@style/MediaController_SeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:max="100" />
+
+        <LinearLayout
+            android:id="@+id/video_view_ll_times"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="center_vertical" >
+
+            <!-- 当前播放时间 -->
+
+            <TextView
+                android:id="@+id/video_view_time_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="00:00:00"
+                android:textColor="@color/whiteColor"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" /"
+                android:textColor="@color/whiteColor" />
+
+            <!-- 总时间 -->
+
+            <TextView
+                android:id="@+id/video_view_time_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="00:00:00"
+                android:textColor="@color/whiteColor"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

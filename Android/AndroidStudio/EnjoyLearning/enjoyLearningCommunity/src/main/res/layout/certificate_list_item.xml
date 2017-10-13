@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.learning.view.course.CourseItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_list_item_selector" >
+
+    <FrameLayout
+        android:id="@+id/certificate_list_item_fl_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 缩略图 -->
+
+        <com.zj.support.widget.ZjImageView
+            android:id="@+id/certificate_list_item_iv_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/list_default" >
+        </com.zj.support.widget.ZjImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_translucent_bg"
+            android:paddingBottom="@dimen/margin_5"
+            android:paddingTop="@dimen/margin_5" >
+
+            <TextView
+                android:id="@+id/certificate_list_item_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_8"
+                android:singleLine="true"
+                android:text="如何学好Android开发之精品课程和健康就看了"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_first_level" />
+        </RelativeLayout>
+
+        <!--申请或为满足条件  -->
+
+        <TextView
+            android:id="@+id/certificate_list_item_tv_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:background="@color/main_color"
+            android:paddingBottom="@dimen/margin_5"
+            android:paddingLeft="@dimen/margin_8"
+            android:paddingRight="@dimen/margin_8"
+            android:paddingTop="@dimen/margin_5"
+            android:text="@string/certificate_apply_no"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/list_second_level" 
+            android:clickable="true"
+            android:onClick="onClickApply"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/certificate_list_item_ll_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/certificate_list_item_fl_above"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_8"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/certificate_list_item_tv_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:maxLines="3"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="【结业考试】>=60  论文成绩>=60  总成绩>=60"
+            android:textColor="@color/list_second_level" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_width"
+        android:layout_below="@+id/certificate_list_item_ll_middle"
+        android:background="@color/divider_color" />
+
+</com.zj.learning.view.course.CourseItemView>

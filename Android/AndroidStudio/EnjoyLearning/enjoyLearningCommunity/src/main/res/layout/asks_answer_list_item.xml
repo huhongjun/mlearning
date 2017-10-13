@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.learning.view.asks.AnswerItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_marginRight="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@color/asks_list_item_selector"
+        android:padding="@dimen/margin_8" >
+
+        <!-- 上边 -->
+
+        <include
+            android:id="@+id/asks_list_item_ll_above"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/user_show" />
+
+        <!-- 中间-详情 -->
+
+        <include
+            android:id="@+id/asks_list_item_ll_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/asks_list_item_ll_above"
+            android:layout_marginTop="@dimen/margin_8"
+            layout="@layout/asks_content" />
+    </RelativeLayout>
+
+</com.zj.learning.view.asks.AnswerItemView>

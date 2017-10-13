@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/course_exam_short_answer_item_et_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:inputType="text"
+        android:paddingBottom="@dimen/margin_5"
+        android:paddingTop="@dimen/margin_5"
+        android:textColor="@color/detail_black_color"
+        android:textSize="@dimen/detail_level" >
+    </EditText>
+
+    <ImageView
+        android:id="@+id/course_question_short_answer_iv_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_width"
+        android:background="@color/divider_color" />
+
+</LinearLayout>

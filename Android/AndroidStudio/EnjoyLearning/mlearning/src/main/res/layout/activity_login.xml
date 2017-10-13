@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity" >
+
+    <RelativeLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/memberId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_normal_down"
+            android:hint="@string/input"
+            android:padding="3dip"
+            android:maxWidth="200dp"
+            android:singleLine="true"
+            android:ellipsize="start"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:onClick="onBtnClick"
+            android:clickable="true" 
+            android:layout_toRightOf="@+id/memberId"
+            android:background="@drawable/login_selector" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/inputLayout"
+        android:layout_alignLeft="@+id/inputLayout"
+        android:layout_alignRight="@+id/inputLayout"
+        android:background="@drawable/login_center" />
+
+</RelativeLayout>

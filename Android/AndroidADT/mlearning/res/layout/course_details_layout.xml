@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_Layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainColor" >
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/course_details"
+            android:textColor="@color/whiteColor"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/backImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/back"
+            android:clickable="true"
+            android:onClick="onBackBtnClick" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/course_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_Layout"
+        android:layout_margin="8dp"
+        android:background="@color/whiteColor" >
+
+        <ImageView
+            android:id="@+id/defaultPic"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/course_default" />
+
+        <RelativeLayout
+            android:id="@+id/course_name_length"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/defaultPic"
+            android:layout_alignTop="@+id/defaultPic"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/defaultPic"
+            android:background="@color/whiteColor" >
+
+            <TextView
+                android:id="@+id/Course_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxLines="2"
+                android:textColor="@color/blackColor" />
+
+            <RelativeLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/Course_Name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp" >
+
+                <TextView
+                    android:id="@+id/courseTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/timeLength"
+                    android:textColor="@color/grayColor"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/Course_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/courseTime"
+                    android:textColor="@color/grayColor"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/offlineBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/timeLayout"
+                android:background="@drawable/btn_offline_selector"
+                android:clickable="true"
+                android:onClick="onOfflineBtnClick" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/divideline"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/course_details"
+        android:layout_alignRight="@+id/course_details"
+        android:layout_below="@+id/course_details"
+        android:background="@drawable/divideline" />
+
+    <TextView
+        android:id="@+id/Course_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divideline"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/grayColor"
+        android:textSize="13sp" />
+
+</RelativeLayout>

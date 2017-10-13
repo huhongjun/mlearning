@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/posts_tag_color" />
+
+    <corners android:radius="20dp" />
+
+    <padding
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp" />
+
+    <stroke
+        android:width="@dimen/stroke_width"
+        android:color="@color/posts_tag_color" />
+    <!-- 这里设置成背景颜色，即空心 -->
+    <gradient
+        android:endColor="@color/bg_color"
+        android:startColor="@color/bg_color" />
+
+</shape>

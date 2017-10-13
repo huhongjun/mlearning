@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <SurfaceView
+        android:id="@+id/course_video_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
+    </SurfaceView>
+
+    <ImageView
+        android:id="@+id/course_video_iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/logo_v_pass" />
+
+    <!-- 顶部栏 -->
+
+    <RelativeLayout
+        android:id="@+id/course_video_rl_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/translucent"
+        android:gravity="center_vertical" 
+        android:padding="@dimen/margin_8">
+
+        <!-- 返回 -->
+
+        <ImageButton
+            android:id="@+id/course_video_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_8"
+            android:background="@drawable/back_selector"
+            android:onClick="onBtnBackClick" />
+
+        <!-- 文件名 -->
+
+        <TextView
+            android:id="@+id/course_video_tv_filename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="享学吧视频播放"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_tv_level" />
+
+        <!-- 笔记 -->
+
+        <ImageButton
+            android:id="@+id/course_video_btn_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:onClick="onNoteBtnClick"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- 播放出错，点击重试 -->
+
+    <RelativeLayout
+        android:id="@+id/course_video_rl_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:onClick="onClickRetry"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_launcher"
+            android:drawablePadding="@dimen/margin_8"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_8"
+            android:text="@string/video_error"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_tv_level" />
+    </RelativeLayout>
+
+    <!-- 屏幕中间-进度条、进度显示 -->
+
+    <RelativeLayout
+        android:id="@+id/course_video_rl_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/course_video_iv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/loading_zj_logo" />
+
+        <LinearLayout
+            android:id="@+id/course_video_ll_tv_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/course_video_iv_progress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_8" >
+
+            <!-- 进度显示 -->
+
+            <TextView
+                android:id="@+id/course_video_tv_progress"
+                style="@style/common_list_tv_second_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/course_video_buffer_pro"
+                android:textColor="@android:color/white" />
+
+            <!-- 网速提示 -->
+
+            <TextView
+                android:id="@+id/course_video_tv_net_progress"
+                style="@style/common_list_tv_second_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_8"
+                android:text="@string/course_video_net_speed"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 底部栏 -->
+
+    <LinearLayout
+        android:id="@+id/course_video_ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/translucent"
+        android:orientation="horizontal" >
+
+        <!-- 播放/暂停 -->
+
+        <ImageButton
+            android:id="@+id/course_video_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:onClick="onPlayPauseClick"
+            android:padding="@dimen/margin_8"
+            android:src="@drawable/video_play_selector" />
+
+        <!-- 进度条 -->
+
+        <SeekBar
+            android:id="@+id/course_video_seekbar"
+            style="@style/video_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:max="100"
+            android:paddingBottom="@dimen/margin_8"
+            android:paddingTop="@dimen/margin_8" />
+
+        <LinearLayout
+            android:id="@+id/course_video_ll_times"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="center_vertical" >
+
+            <!-- 当前播放时间 -->
+
+            <TextView
+                android:id="@+id/course_video_time_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:text="@string/course_video_time"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_second_level"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_second_level" />
+
+            <!-- 总时间 -->
+
+            <TextView
+                android:id="@+id/course_video_time_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_8"
+                android:text="@string/course_video_time"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_second_level" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

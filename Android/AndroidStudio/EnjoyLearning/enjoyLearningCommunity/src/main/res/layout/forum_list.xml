@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.support.widget.swipeback.SwipeBackRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <include
+        android:id="@+id/forum_list_title"
+        layout="@layout/titlebar_back" />
+
+    <GridView
+        android:id="@+id/forum_type_gv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forum_list_title"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:cacheColorHint="#00000000"
+        android:drawSelectorOnTop="false"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="@dimen/margin_8"
+        android:numColumns="5"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/margin_5"
+        android:visibility="gone" >
+    </GridView>
+    <!-- 分割线 -->
+
+    <ImageView
+        android:id="@+id/posts_list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_width"
+        android:layout_below="@+id/forum_type_gv"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@color/posts_item_line" />
+
+    <com.zj.support.widget.refresh.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/forum_list_listview"
+        style="@style/list_refresh_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/posts_list_divider"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/list_loading_zj_logo"
+        ptr:ptrHeaderBackground="@color/list_pull_refresh_bg"
+        ptr:ptrHeaderTextAppearance="@dimen/list_second_level"
+        ptr:ptrHeaderTextColor="@color/list_pull_refresh_tv"
+        ptr:ptrMode="both" />
+
+</com.zj.support.widget.swipeback.SwipeBackRelativeLayout>

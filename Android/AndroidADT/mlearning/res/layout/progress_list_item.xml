@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhijin.mlearning.app.view.itemview.ProgressListItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/more_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/more" />
+
+    <TextView
+        android:id="@+id/Course_Length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/more_arrow"
+        android:textColor="@color/blackColor" />
+
+    <TextView
+        android:id="@+id/Course_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/Course_Length"
+        android:textColor="@color/blackColor" />
+
+</com.zhijin.mlearning.app.view.itemview.ProgressListItemView>

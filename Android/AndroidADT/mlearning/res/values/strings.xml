@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">mlearning</string>
+    <string name="netError">请检查您的网络连接</string>
+    <string name="exit">再按一次退出</string>
+    <string name="mediacontroller_play_pause">Play/Pause</string>
+    <string name="action_settings">SETTING</string>
+    <string name="input">请输入您的邮箱</string>
+    <string name="course_section">课程小节</string>
+    <string name="learning_progress">学习记录</string>
+    <string name="desc_memo">简介:</string>
+    <string name="timeLength">时长:</string>
+    <string name="course_details">课程详情</string>
+    <string name="video_no_exsit">抱歉，视频文件不存在</string>
+    <string name="video_buffer_pro">缓冲中：0%</string>
+    <string name="video_net_speed">下载速度：0.0KB/S</string>
+    <string name="video_error_unknow">咦，播放出错了，请您先放松一下眼睛吧！\n  可能原因：\n 1、网络信号不好 \n 2、网速不给力</string>
+    <string name="video_offline_error">咦，播放出错了，请您先放松一下眼睛吧！</string>
+    <string name="video_invalid_progressive_playback">抱歉，此视频好像不支持在此设备上播放！</string>
+    <string name="video_error_invalid_path">对不起，这个视频路径或者URI无效</string>
+</resources>

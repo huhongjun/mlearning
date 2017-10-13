@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/anonymous_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/anonymous" />
+
+    <RadioGroup
+        android:id="@+id/anonymous_select_gr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/anonymous_tv"
+        android:layout_toRightOf="@+id/anonymous_tv"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/forum_posts_isname_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/common_anonymous_selector"
+            android:text="@string/yes"
+            android:textColor="@color/list_first_level" />
+
+        <RadioButton
+            android:id="@+id/forum_posts_name_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/common_anonymous_selector"
+            android:checked="true"
+            android:text="@string/no"
+            android:textColor="@color/list_first_level" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/anonymous_memo_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/anonymous_select_gr"
+        android:layout_toRightOf="@+id/anonymous_select_gr"
+        android:text="@string/anonymous_memo" />
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EnjoyLearning.iml" filepath="$PROJECT_DIR$/EnjoyLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enjoyLearningCommunity/enjoyLearningCommunity.iml" filepath="$PROJECT_DIR$/enjoyLearningCommunity/enjoyLearningCommunity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mlearning/mlearning.iml" filepath="$PROJECT_DIR$/mlearning/mlearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zjsupportv3/zjsupportv3.iml" filepath="$PROJECT_DIR$/zjsupportv3/zjsupportv3.iml" />
+    </modules>
+  </component>
+</project>

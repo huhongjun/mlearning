@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.support.widget.swipeback.SwipeBackRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    swipe:onSwipeFinish="onSwipeFinish" >
+
+    <include
+        android:id="@+id/course_record_list_titlebar"
+        layout="@layout/titlebar_cancel" />
+
+    <com.zj.support.widget.refresh.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/course_record_list_listview"
+        style="@style/list_refresh_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_record_list_titlebar"
+        android:dividerHeight="0dp"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/list_loading_zj_logo"
+        ptr:ptrHeaderBackground="@color/list_pull_refresh_bg"
+        ptr:ptrHeaderTextAppearance="@dimen/list_second_level"
+        ptr:ptrHeaderTextColor="@color/list_pull_refresh_tv"
+        ptr:ptrMode="pullFromStart" />
+
+    <!-- 初始化加载中 -->
+
+    <include
+        android:id="@+id/course_list_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading"
+        android:visibility="gone" >
+    </include>
+
+</com.zj.support.widget.swipeback.SwipeBackRelativeLayout>

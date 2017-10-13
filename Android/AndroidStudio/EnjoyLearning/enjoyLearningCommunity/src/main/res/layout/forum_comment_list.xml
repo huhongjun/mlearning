@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.support.widget.swipeback.SwipeBackRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    swipe:onSwipeFinish="onSwipeFinish" >
+
+    <include
+        android:id="@+id/forum_comment_list_title"
+        layout="@layout/titlebar_back" />
+
+    <LinearLayout
+        android:id="@+id/posts_detail_bottom_l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/anonymous_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_weight="1"
+            android:text="@string/anonymous"
+            android:textColor="@color/bg_color" />
+
+        <EditText
+            android:id="@+id/posts_comment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:hint="@string/review_add" />
+
+        <Button
+            android:id="@+id/posts_comment_submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/forum_send" />
+    </LinearLayout>
+
+    <com.zj.support.widget.refresh.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/forum_comment_list_lv"
+        style="@style/list_refresh_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/posts_detail_bottom_l"
+        android:layout_below="@+id/forum_comment_list_title"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/list_loading_zj_logo"
+        ptr:ptrHeaderBackground="@color/list_pull_refresh_bg"
+        ptr:ptrHeaderTextAppearance="@dimen/list_second_level"
+        ptr:ptrHeaderTextColor="@color/list_pull_refresh_tv"
+        ptr:ptrMode="both" />
+
+</com.zj.support.widget.swipeback.SwipeBackRelativeLayout>

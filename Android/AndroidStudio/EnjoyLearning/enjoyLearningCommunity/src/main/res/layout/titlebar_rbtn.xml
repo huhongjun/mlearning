@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 主页-标题栏 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titlebar_rbtn_rl_titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/titlebar_height"
+    android:background="@color/main_color"
+    android:paddingBottom="@dimen/margin_5"
+    android:paddingTop="@dimen/margin_5" >
+
+    <ImageView
+        android:id="@+id/titlebar_back_iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:onClick="onBtnBackClick"
+        android:padding="3dp"
+        android:src="@drawable/back_selector"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/titlebar_rbtn_rg_titlebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/titlebar_rbtn_radiobtn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/titlebar_rbtn_left_selector"
+            android:button="@null"
+            android:checked="true"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="3dp"
+            android:text="@string/course_all"
+            android:textColor="@color/titlebar_rbtn_tv_selector"
+            android:textSize="@dimen/list_first_level" />
+
+        <RadioButton
+            android:id="@+id/titlebar_rbtn_radiobtn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/titlebar_rbtn_right_selector"
+            android:button="@null"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="3dp"
+            android:text="@string/course_me"
+            android:textColor="@color/titlebar_rbtn_tv_selector"
+            android:textSize="@dimen/list_first_level" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/titlebar_rbtn_rl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+
+        <ImageView
+            android:id="@+id/titlebar_rbtn_iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/course_record" />
+
+        <ImageView
+            android:id="@+id/titlebar_rbtn_iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/titlebar_rbtn_iv_left"
+            android:clickable="true"
+            android:src="@drawable/search" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/titlebar_rbtn_tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/title_tv_bg_selector"
+        android:clickable="true"
+        android:onClick="onClickRightBtn"
+        android:padding="@dimen/margin_8"
+        android:singleLine="true"
+        android:text="@string/certificate_rule"
+        android:textColor="@color/titlebar_tv_selector"
+        android:textSize="@dimen/title_tv_level"
+        android:visibility="gone" />
+
+</RelativeLayout>

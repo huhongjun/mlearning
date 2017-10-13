@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_bg_color_selector"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/course_question_single_choice_item_tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8"
+        android:background="@drawable/course_exam_option_normal"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="A"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/list_first_level" />
+
+    <TextView
+        android:id="@+id/course_question_single_choice_item_tv_content"
+        style="@style/course_exam_options_tv_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="和空间看就看了建行卡考虑" >
+    </TextView>
+
+</LinearLayout>

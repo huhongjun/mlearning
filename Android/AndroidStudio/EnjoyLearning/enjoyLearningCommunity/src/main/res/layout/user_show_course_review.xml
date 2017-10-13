@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 课程评价用户部分 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color" >
+
+    <!-- 头像 -->
+
+    <FrameLayout
+        android:id="@+id/user_show_course_review_fr_avator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <!-- 缩略图 -->
+
+        <com.zj.support.widget.ZjImageView
+            android:id="@+id/user_show_course_review_iv_avator"
+            style="@style/iv_avator_thumb_style" >
+        </com.zj.support.widget.ZjImageView>
+    </FrameLayout>
+
+    <!-- 名字 -->
+
+    <TextView
+        android:id="@+id/user_show_course_review_tv_name"
+        style="@style/common_list_tv_first_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_toRightOf="@+id/user_show_course_review_fr_avator"
+        android:text="张三" />
+
+    <!-- 状态 -->
+
+    <TextView
+        android:id="@+id/user_show_course_review_tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_toRightOf="@+id/user_show_course_review_tv_name"
+        android:background="@drawable/course_review_status_bg_selected"
+        android:paddingLeft="@dimen/margin_8"
+        android:paddingRight="@dimen/margin_8"
+        android:singleLine="true"
+        android:text="@string/course_review_status_complete"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/list_second_level" />
+
+    <!-- 评分 -->
+
+    <RatingBar
+        android:id="@+id/user_show_course_review_ratingbar"
+        style="@style/rating_bar_style_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_show_course_review_fr_avator"
+        android:layout_alignLeft="@+id/user_show_course_review_tv_name"
+        android:layout_below="@+id/user_show_course_review_tv_name"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/user_show_course_review_fr_avator"
+        android:gravity="bottom" />
+
+    <!-- 时间 -->
+
+    <TextView
+        android:id="@+id/user_show_course_review_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="1分钟前"
+        android:textColor="@color/list_second_level"
+        android:textSize="@dimen/list_second_level" />
+
+</RelativeLayout>

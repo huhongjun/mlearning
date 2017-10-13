@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.learning.view.course.AnswerCardItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/course_answer_tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/course_answer_card_item_bg_no_answer_selector"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="1"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/list_first_level" 
+        android:clickable="true"
+        android:onClick="onClickAnswerCount">
+    </TextView>
+
+</com.zj.learning.view.course.AnswerCardItemView>

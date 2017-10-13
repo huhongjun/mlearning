@@ -1,0 +1,502 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/course_detail_fr_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/course_detail_rl_bottom" >
+
+        <ScrollView
+            android:id="@+id/course_detail_sv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:scrollbars="none" >
+
+            <com.zj.support.widget.swipeback.SwipeBackLinearLayout
+                xmlns:swipe="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_8"
+                swipe:onSwipeFinish="onSwipeFinish" >
+
+                <!-- 上边 -->
+
+                <FrameLayout
+                    android:id="@+id/course_detail_fr_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <!-- 缩略图 -->
+
+                    <com.zj.support.widget.ZjImageView
+                        android:id="@+id/course_detail_iv_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/list_default" >
+                    </com.zj.support.widget.ZjImageView>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/course_detail_item_ll_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/course_list_item_fl_above"
+                    android:gravity="center_vertical" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/course_detail_tv_learn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/course_learn_count_icon"
+                            android:drawablePadding="@dimen/margin_8"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="3dp"
+                            android:paddingTop="3dp"
+                            android:singleLine="true"
+                            android:text="学过（19099）"
+                            android:textColor="@color/main_color" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/divider_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/margin_8"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/common_list_item_selector"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:onClick="onClickFocus" >
+
+                        <TextView
+                            android:id="@+id/course_detail_tv_focus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/course_focus_count_icon"
+                            android:drawablePadding="@dimen/margin_8"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="3dp"
+                            android:paddingTop="3dp"
+                            android:singleLine="true"
+                            android:text="关注（222222）"
+                            android:textColor="@color/main_color" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_width"
+                    android:layout_below="@+id/course_detail_ll_middle"
+                    android:background="@color/divider_color" />
+
+                <!-- 课程名称 -->
+
+                <TextView
+                    android:id="@+id/course_detail_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="心理健康辅导课程"
+                    android:textColor="@color/detail_black_color"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8" >
+
+                    <RatingBar
+                        android:id="@+id/course_detail_ratingbar"
+                        style="@style/rating_bar_style_gray_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true" />
+
+                    <!-- 总评分 -->
+
+                    <TextView
+                        android:id="@+id/course_detail_tv_score_total"
+                        style="@style/detail_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_toRightOf="@+id/course_detail_ratingbar"
+                        android:singleLine="true"
+                        android:text="9.5（12人评价）" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16" >
+
+                    <TextView
+                        android:id="@+id/course_detail_tv_review_knowleage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:singleLine="true"
+                        android:text="知识量：9.2"
+                        android:textColor="@color/detail_gray_color" />
+
+                    <TextView
+                        android:id="@+id/course_detail_tv_review_funny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:singleLine="true"
+                        android:text="趣味性：8.9"
+                        android:textColor="@color/detail_gray_color" />
+
+                    <TextView
+                        android:id="@+id/course_detail_tv_review_design"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:singleLine="true"
+                        android:text="课程设计：9.7"
+                        android:textColor="@color/detail_gray_color" />
+                </RelativeLayout>
+
+                <!-- 作业/考试 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8" >
+
+                    <View
+                        android:id="@+id/course_detail_struct"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/black" />
+
+                    <!-- 作业题 -->
+
+                    <LinearLayout
+                        android:id="@+id/course_detail_ll_homework"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignRight="@+id/course_detail_struct"
+                        android:gravity="center_horizontal"
+                        android:onClick="onClickHomework"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/margin_8"
+                        android:paddingTop="@dimen/margin_8" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/course_homework_icon" />
+
+                        <TextView
+                            android:id="@+id/course_detail_tv_homework"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3套作业题"
+                            android:textSize="@dimen/detail_level" />
+                    </LinearLayout>
+
+                    <!-- 考试题 -->
+
+                    <LinearLayout
+                        android:id="@+id/course_detail_ll_exam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/course_detail_struct"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_horizontal"
+                        android:onClick="onClickExam"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/margin_8"
+                        android:paddingTop="@dimen/margin_8" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/course_exam_icon" />
+
+                        <TextView
+                            android:id="@+id/course_detail_tv_exam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1套考试题"
+                            android:textSize="@dimen/detail_level" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/detail_title_second_tv_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="@string/course_desc" />
+
+                <!-- 课程描述 -->
+
+                <TextView
+                    android:id="@+id/course_detail_tv_desc"
+                    style="@style/detail_tv_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:maxLines="2"
+                    android:text="简述心理健康的辅导，有益于您的心理健康还看见看见了口家了基类口极乐空间看" />
+
+                <!-- 更多描述 -->
+
+                <Button
+                    android:id="@+id/course_detail_btn_desc_more"
+                    style="@style/common_btn_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:onClick="onClickDescMore"
+                    android:text="@string/course_desc_more"
+                    android:visibility="gone" />
+
+                <!-- 分割线 -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_width"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8" >
+
+                    <TextView
+                        android:id="@+id/course_detail_tv_review_tips"
+                        style="@style/detail_title_second_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="评论（12个评论）" />
+
+                    <!-- 写评论 -->
+
+                    <Button
+                        android:id="@+id/course_detail_btn_review_add"
+                        style="@style/common_btn_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:onClick="onClickReviewAdd"
+                        android:text="@string/course_review_add" />
+                </RelativeLayout>
+
+                <!-- 评论Item -->
+
+                <include
+                    android:id="@+id/course_detail_rl_review_item"
+                    layout="@layout/course_review_list_item"
+                    android:visibility="gone" />
+
+                <!-- 木有评论时，提示 -->
+
+                <TextView
+                    android:id="@+id/course_detail_tv_review_empty"
+                    style="@style/detail_tv_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="@string/course_review_empty"
+                    android:visibility="gone" />
+
+                <!-- 评论加载中 -->
+
+                <ImageView
+                    android:id="@+id/course_iv_review_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/list_loading_zj_logo"
+                    android:visibility="gone" />
+
+                <!-- 更多评论 -->
+
+                <Button
+                    android:id="@+id/course_detail_btn_review_more"
+                    style="@style/common_btn_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:onClick="onClickReviewMore"
+                    android:text="@string/review_more"
+                    android:visibility="gone" />
+
+                <!-- 分割线 -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_width"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:background="@color/divider_color"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/course_detail_tv_asks_tips"
+                        style="@style/detail_title_second_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="问答（3个问题）" />
+
+                    <!-- 提问 -->
+
+                    <Button
+                        android:id="@+id/course_detail_btn_asks_add"
+                        style="@style/common_btn_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:onClick="onClickAsksAdd"
+                        android:text="@string/asks_add" />
+                </RelativeLayout>
+
+                <!-- 问题Item -->
+
+                <include
+                    android:id="@+id/course_detail_rl_asks_item"
+                    android:layout_marginTop="@dimen/margin_8"
+                    layout="@layout/asks_list_item"
+                    android:visibility="gone" />
+
+                <!-- 更多问题 -->
+
+                <Button
+                    android:id="@+id/course_detail_btn_asks_more"
+                    style="@style/common_btn_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:onClick="onClickAsksMore"
+                    android:text="@string/asks_more"
+                    android:visibility="gone" />
+            </com.zj.support.widget.swipeback.SwipeBackLinearLayout>
+        </ScrollView>
+
+        <!-- 顶部浮动- 返回 -->
+
+        <RelativeLayout
+            android:id="@+id/course_detail_rl_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/titlebar_back_iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBtnBackClick"
+                android:padding="@dimen/margin_8"
+                android:src="@drawable/back_selector_2" />
+
+            <!-- 顶部浮动- 下载 -->
+
+            <ImageView
+                android:id="@+id/course_detail_iv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="onClickDownload"
+                android:padding="@dimen/margin_8"
+                android:src="@drawable/download_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 加载中 -->
+
+        <include
+            android:id="@+id/course_detail_ll_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/loading"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- 底部 -->
+
+    <RelativeLayout
+        android:id="@+id/course_detail_rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/common_bottom_btn_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickGoClass"
+        android:paddingBottom="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_8" >
+
+        <TextView
+            android:id="@+id/course_detail_tv_go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/course_go_class_before"
+            android:textColor="@color/common_bottom_btn_text_selector"
+            android:textSize="@dimen/list_first_level" />
+
+        <ImageView
+            android:id="@+id/course_detail_iv_join_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/list_loading_zj_logo"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <!-- 滑入、滑出那页动 ，层级的感觉 -->
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_none</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_none</item>
+    </style>
+
+    <style name="AppTheme2" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <!-- <item name="android:background">#F8F8FF</item> -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation2</item>
+    </style>
+
+    <style name="popup_window_image_select_style">
+        <item name="android:windowEnterAnimation">@anim/ani_common_bottombar_in</item>
+        <item name="android:windowExitAnimation">@anim/ani_common_bottombar_out</item>
+    </style>
+    <!-- animation 样式 -->
+    <style name="activityAnimation2" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_to_bottom</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_none</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_none</item>
+    </style>
+    <!-- 常规Button的style -->
+    <style name="common_btn_style">
+        <item name="android:background">@drawable/common_btn_bg_round_selector</item>
+        <item name="android:textColor">@color/common_btn_text_selector</item>
+        <item name="android:textSize">@dimen/list_second_level</item>
+    </style>
+    <!-- 普通ListItem 一级TextView的style -->
+    <style name="common_list_tv_first_style">
+        <item name="android:textColor">@color/common_list_text_first_selector</item>
+        <item name="android:textSize">@dimen/list_first_level</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!-- 普通ListItem 二级TextView的style -->
+    <style name="common_list_tv_second_style">
+        <item name="android:textColor">@color/common_list_text_second_selector</item>
+        <item name="android:textSize">@dimen/list_second_level</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!-- 刷新ListView -->
+    <style name="list_refresh_style">
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">@dimen/margin_16</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:listSelector">@null</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:smoothScrollbar">true</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+    <!-- 提示类型TextView的style -->
+    <style name="tips_tv_style">
+        <item name="android:textSize">@dimen/tips_tv_size</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!-- 详情TextView的style -->
+    <style name="detail_tv_style">
+        <item name="android:textSize">@dimen/detail_level</item>
+        <item name="android:textColor">@color/detail_gray_color</item>
+    </style>
+    <!-- 详情-二级标题TextView的style -->
+    <style name="detail_title_second_tv_style">
+        <item name="android:textSize">@dimen/list_first_level</item>
+        <item name="android:textColor">@color/detail_black_color</item>
+    </style>
+    <!-- 列表缩略图头像Iv style -->
+    <style name="iv_avator_thumb_style">
+        <item name="android:layout_width">@dimen/thumb_avator_width</item>
+        <item name="android:layout_height">@dimen/thumb_avator_height</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/avator_default</item>
+    </style>
+    <!-- 用户中心头像Iv style -->
+    <style name="iv_avator_user_style">
+        <item name="android:layout_width">@dimen/user_avator_width</item>
+        <item name="android:layout_height">@dimen/user_avator_height</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/ic_launcher</item>
+    </style>
+    <!-- 考试/作业选项TextView style -->
+    <style name="course_exam_options_tv_style">
+        <item name="android:textSize">@dimen/list_first_level</item>
+        <item name="android:textColor">@color/detail_gray_color</item>
+        <item name="android:drawablePadding">@dimen/margin_8</item>
+        <item name="android:paddingTop">@dimen/margin_8</item>
+        <item name="android:paddingBottom">@dimen/margin_8</item>
+    </style>
+
+    <!-- 课程评论添加状态选择RadionButton的style -->
+    <style name="course_review_add_status_rBtn_style">
+        <item name="android:textSize">@dimen/list_second_level</item>
+        <item name="android:textColor">@color/course_review_status_rbtn_selector</item>
+        <item name="android:background">@drawable/course_review_status_bg_selector</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_marginLeft">@dimen/margin_8</item>
+    </style>
+    <!-- 星级计分style-默认不可点击 -->
+    <style name="rating_bar_style_review" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_selector</item>
+        <item name="android:minHeight">@dimen/margin_16</item>
+        <item name="android:maxHeight">@dimen/margin_16</item>
+        <item name="android:max">10</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <!-- 星级计分style-灰色，可点击 -->
+    <style name="rating_bar_style_gray_1" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_selector_gray</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:maxHeight">24dp</item>
+        <item name="android:max">10</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+    </style>
+    <!-- 我的/更多里tv的style -->
+    <style name="user_index_tv_style">
+        <item name="android:layout_marginLeft">@dimen/margin_16</item>
+        <item name="android:drawablePadding">@dimen/margin_16</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:textSize">@dimen/list_first_level</item>
+        <item name="android:textColor">@color/tv_more_textColor</item>
+    </style>
+    <!-- 我的/更多里更多图标style -->
+    <style name="more_iv_style">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:background">@drawable/common_more_selector</item>
+    </style>
+    <!-- 登录/注册输入框style -->
+    <style name="user_et_style">
+        <item name="android:background">@drawable/user_et_bg_selector</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxWidth">100dp</item>
+        <item name="android:paddingLeft">@dimen/margin_8</item>
+        <item name="android:paddingRight">@dimen/margin_8</item>
+        <item name="android:drawablePadding">@dimen/margin_8</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/detail_black_color</item>
+        <item name="android:textColorHint">@color/detail_gray_color</item>
+        <item name="android:textSize">@dimen/list_first_level</item>
+    </style>
+
+    <style name="video_seek_bar">
+        <item name="android:minHeight">2dp</item>
+        <item name="android:maxHeight">2dp</item>
+        <!--
+        <item name="android:progressDrawable">@drawable/video_seekbar</item>
+        <item name="android:thumb">@drawable/video_seekbar_thumb</item>
+        -->
+        <item name="android:progressDrawable">@drawable/video_seekbar</item>
+        <item name="android:thumb">@drawable/seekbar_thumb</item>
+    </style>
+     <!-- 自定义CustomDialog的style -->
+    <style name="custom_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/custom_dialog_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

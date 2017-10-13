@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.learning.view.course.CourseRecordItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/margin_8"
+    android:paddingRight="@dimen/margin_8" >
+
+    <include
+        android:id="@+id/course_record_list_item_fl_left"
+        layout="@layout/common_list_item_left" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_5"
+        android:paddingTop="@dimen/margin_5" 
+        android:layout_weight="1">
+
+        
+        <!-- 视频名称 -->
+
+        <TextView
+            android:id="@+id/course_record_list_item_tv_section_name"
+            style="@style/common_list_tv_first_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="如何实现Android两级图片缓存"
+            android:textStyle="bold" />
+
+        <!-- 课程名称 -->
+
+        <TextView
+            android:id="@+id/course_record_list_item_tv_course_name"
+            style="@style/common_list_tv_second_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_5"
+            android:text="Android培训课程" />
+
+        <!-- 已观看 -->
+
+        <TextView
+            android:id="@+id/course_record_list_item_tv_video_time"
+            style="@style/common_list_tv_second_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_5"
+            android:text="已看至   00:22/00:38" />
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/course_record_list_item_btn_right"
+        style="@style/common_btn_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:focusable="false"
+        android:onClick="onClickRight"
+        android:text="@string/course_record_going" />
+
+</com.zj.learning.view.course.CourseRecordItemView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_empty_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <!-- 数据为空时显示 -->
+
+    <RelativeLayout
+        android:id="@+id/list_empty_rl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:id="@+id/list_empty_iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/list_empty_icon" />
+
+        <TextView
+            android:id="@+id/list_empty_tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_empty_iv_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/list_empty"
+            android:textColor="@color/tips_color"
+            android:textSize="@dimen/list_first_level" />
+    </RelativeLayout>
+
+</RelativeLayout>

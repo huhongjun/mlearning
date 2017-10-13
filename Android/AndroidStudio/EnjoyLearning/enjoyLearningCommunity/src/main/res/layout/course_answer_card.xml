@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 答题卡 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <!-- 上边 -->
+
+    <TextView
+        android:id="@+id/course_answer_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@color/course_exam_titlebar_bg"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_8"
+        android:textColor="@color/detail_black_color"
+        android:textSize="@dimen/title_tv_level" />
+
+    <GridView
+        android:id="@+id/course_answer_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_answer_tv_title"
+        android:layout_marginTop="@dimen/margin_8"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="5"
+        android:verticalSpacing="@dimen/margin_8" >
+    </GridView>
+    
+     <!-- 底部-交卷 -->
+
+    <TextView
+        android:id="@+id/course_answer_card_tv_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/common_bottom_btn_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickCommit"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_8"
+        android:text="@string/course_exam_commit"
+        android:textColor="@color/common_bottom_btn_text_selector"
+        android:textSize="@dimen/list_first_level" />
+
+</RelativeLayout>

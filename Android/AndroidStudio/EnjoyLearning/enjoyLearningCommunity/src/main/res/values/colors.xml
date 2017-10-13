@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 半透明 -->
+    <color name="translucent">#b0000000</color>
+    <color name="alltranslucent">#bb000000</color>
+    <color name="red">#FF6347</color>
+    <color name="main_color">#e97360</color>
+    <color name="main_bottombar_bg">#dedede</color>
+    <color name="main_color_seletecd">#E9967A</color>
+    <color name="main_color_seletecd_text">@android:color/white</color>
+    <color name="divider_color">#cbcbcb</color>
+    <color name="bg_color">#f2f2f2</color>
+    <color name="bg_color_selected">@color/divider_color</color>
+    <color name="tips_color">#a0a0a0</color>
+    <color name="course_exam_titlebar_bg">#e4e4e4</color>
+    <!-- 输入框描边 -->
+    <color name="et_bound_color">@color/divider_color</color>
+    <!-- 详情TextView偏黑 -->
+    <color name="detail_black_color">#595858</color>
+    <!-- 详情TextView偏灰 -->
+    <color name="detail_gray_color">#898989</color>
+    <color name="list_first_level">#575757</color>
+    <color name="list_first_level_readed">#aeadad</color>
+    <color name="list_second_level">#898989</color>
+    <color name="list_third_level">@android:color/darker_gray</color>
+    <color name="list_first_level_selected">@color/list_first_level_readed</color>
+    <color name="list_first_level_readed_selected">@android:color/white</color>
+    <color name="list_second_level_selected">@color/list_first_level_readed</color>
+    <color name="list_third_level_selected">@android:color/darker_gray</color>
+    <color name="asks_list_bottom_bg">#f0f0f0</color>
+    <color name="asks_list_bottom_bg_selected">#c8c8c8</color>
+    <color name="asks_bound_line">#dcdcdc</color>
+    <color name="asks_btn_selected">#ff9300</color>
+    <color name="asks_detail_bottom_bg">#de9b43</color>
+    <color name="asks_list_item_bg">#f9f9f9</color>
+    <color name="asks_list_item_bg_selected">#eaebeb</color>
+    <color name="list_pull_refresh_bg">#f0f0f0</color>
+    <color name="list_pull_refresh_tv">#a4a4a4</color>
+    <!-- 我的 引导界面字体颜色 -->
+    <color name="tv_more_textColor">#868686</color>
+    <color name="posts_tag_color">#9ea1a0</color>
+    <color name="posts_tag_textcolor">#a0a0a0</color>
+    <color name="posts_item_first_color">#595858</color>
+    <color name="posts_item_second_color">#a0a0a0</color>
+    <color name="posts_item_line">#cbcbcb</color>
+    <color name="seekbar_bg">@android:color/white</color>
+    <color name="seekbar_second_progress">@android:color/darker_gray</color>
+    <color name="seekbar_progress">#36c77b</color>
+    <color name="asks_choice_text_noselected">#f39c00</color>
+    <color name="asks_choice_text_selected">#bd7e00</color>
+    <color name="asks_choice_btn_noselected">#f6f6f6</color>
+    <color name="asks_choice_btn_selected">#d4d4d4</color>
+    <color name="asks_choice_bg">#dfdfdf</color>
+
+</resources>

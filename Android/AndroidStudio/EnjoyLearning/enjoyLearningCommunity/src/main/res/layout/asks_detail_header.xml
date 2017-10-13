@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.learning.view.asks.AnswerItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/asks_list_item_bg_selector"
+    android:paddingTop="@dimen/margin_8" >
+
+    <!-- 上边 -->
+
+    <include
+        android:id="@+id/asks_detail_header_rl_above"
+        layout="@layout/user_show" />
+
+    <!-- 中间-详情 -->
+
+    <LinearLayout
+        android:id="@+id/asks_detail_header_ll_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/asks_detail_header_rl_above"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        android:orientation="vertical" >
+
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/asks_detail_header_tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/list_first_level"
+            android:textSize="@dimen/list_second_level" />
+
+        <!-- 缩略图 -->
+
+        <com.zj.support.widget.ZjImageView
+            android:id="@+id/asks_detail_header_iv_thumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/asks_detail_header_tv_answer_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/asks_detail_header_ll_middle"
+        android:layout_below="@+id/asks_detail_header_ll_middle"
+        android:text="@string/asks_reply_couts"
+        android:textColor="@color/detail_gray_color"
+        android:textSize="@dimen/list_second_level" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/asks_detail_header_tv_answer_count"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@color/asks_bound_line" />
+
+</com.zj.learning.view.asks.AnswerItemView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.support.widget.swipeback.SwipeBackRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    swipe:onSwipeFinish="onSwipeFinish" >
+
+    <include
+        android:id="@+id/forum_list_title"
+        layout="@layout/titlebar_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/forum_list_title"
+        android:layout_margin="@dimen/margin_8" >
+
+        <TextView
+            android:id="@+id/posts_type_memo_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/posts_type" />
+
+        <GridView
+            android:id="@+id/forum_type_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/posts_type_memo_tv"
+            android:cacheColorHint="#00000000"
+            android:drawSelectorOnTop="false"
+            android:gravity="center_horizontal"
+            android:numColumns="5"
+            android:scrollbars="none" >
+        </GridView>
+
+        <LinearLayout
+            android:id="@+id/forum_posts_anonymous_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forum_type_gv"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal" >
+
+            <include layout="@layout/anonymous_layout" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/forum_posts_title_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forum_posts_anonymous_ll"
+            android:layout_marginTop="@dimen/margin_8"
+            android:hint="@string/posts_title" />
+
+        <EditText
+            android:id="@+id/forum_posts_content_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forum_posts_title_et"
+            android:layout_marginTop="@dimen/margin_5"
+            android:hint="@string/posts_content"
+            android:lines="8" />
+
+        <TextView
+            android:id="@+id/posts_memo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forum_posts_content_et"
+            android:text="@string/posts_memo" />
+    </RelativeLayout>
+
+</com.zj.support.widget.swipeback.SwipeBackRelativeLayout>

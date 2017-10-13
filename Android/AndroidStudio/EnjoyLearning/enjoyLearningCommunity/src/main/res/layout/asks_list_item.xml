@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.learning.view.asks.QuestionItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/asks_list_item_bg_selector" >
+
+    <include
+        android:id="@+id/asks_list_item_rl_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        layout="@layout/user_show" />
+
+    <!-- 中间-详情 -->
+
+    <include
+        android:id="@+id/asks_list_item_ll_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/asks_list_item_rl_user"
+        android:layout_alignRight="@+id/asks_list_item_rl_user"
+        android:layout_below="@+id/asks_list_item_rl_user"
+        android:layout_marginTop="@dimen/margin_8"
+        layout="@layout/asks_content" />
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:id="@+id/asks_list_item_iv_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_width"
+        android:layout_below="@+id/asks_list_item_ll_middle"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@color/asks_bound_line" />
+
+    <LinearLayout
+        android:id="@+id/asks_list_item_rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/asks_list_item_iv_divider"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <!-- 回答 数 -->
+
+            <TextView
+                android:id="@+id/asks_list_item_tv_reply_counts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/course_learn_count_icon"
+                android:drawablePadding="@dimen/margin_8"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/margin_8"
+                android:paddingTop="@dimen/margin_8"
+                android:singleLine="true"
+                android:textColor="@color/main_color" >
+            </TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/divider_width"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <!-- 立即回答 -->
+
+            <TextView
+                android:id="@+id/asks_list_item_tv_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/course_focus_count_icon"
+                android:drawablePadding="@dimen/margin_8"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/margin_8"
+                android:paddingTop="@dimen/margin_8"
+                android:singleLine="true"
+                android:text="@string/asks_reply_now"
+                android:textColor="@color/main_color" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.zj.learning.view.asks.QuestionItemView>

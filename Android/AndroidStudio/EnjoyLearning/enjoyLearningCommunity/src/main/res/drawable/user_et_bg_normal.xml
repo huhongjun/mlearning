@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/bg_color" />
+
+    <stroke
+        android:width="@dimen/stroke_width"
+        android:color="@color/et_bound_color" />
+
+    <!-- 圆角 -->
+    <corners
+        android:bottomLeftRadius="@dimen/margin_5"
+        android:bottomRightRadius="@dimen/margin_5"
+        android:topLeftRadius="@dimen/margin_5"
+        android:topRightRadius="@dimen/margin_5" />
+
+    <gradient
+        android:angle="270"
+        android:endColor="@android:color/white"
+        android:gradientRadius="5"
+        android:startColor="@android:color/white"
+        android:type="linear" />
+
+    <padding
+        android:bottom="@dimen/margin_8"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="@dimen/margin_8" />
+
+</shape>

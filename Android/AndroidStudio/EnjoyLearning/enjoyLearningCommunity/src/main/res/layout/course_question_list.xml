@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.support.widget.swipeback.SwipeBackRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    swipe:onSwipeFinish="onSwipeFinish" >
+
+    <include
+        android:id="@+id/course_question_list_ll_titlebar"
+        layout="@layout/titlebar_cancel" />
+
+    <ListView
+        android:id="@+id/course_question_list_listview"
+        style="@style/list_refresh_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_question_list_ll_titlebar"
+        android:dividerHeight="0dp" 
+        android:footerDividersEnabled="true"/>
+
+    <!-- 初始化加载中 -->
+
+    <include
+        android:id="@+id/course_question_list_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_question_list_ll_titlebar"
+        layout="@layout/loading"
+        android:visibility="gone" >
+    </include>
+    
+    <!-- 没数据 -->
+
+    <include
+        android:id="@+id/course_question_list_rl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/course_question_list_ll_titlebar"
+        layout="@layout/list_empty"
+        android:visibility="gone" />
+
+</com.zj.support.widget.swipeback.SwipeBackRelativeLayout>

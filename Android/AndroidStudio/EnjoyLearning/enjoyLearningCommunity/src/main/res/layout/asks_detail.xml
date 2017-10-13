@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.support.widget.swipeback.SwipeBackRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/asks_detail_rl_swipeback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    swipe:onSwipeFinish="onSwipeFinish" >
+
+    <!-- 标题栏 -->
+
+    <include
+        android:id="@+id/asks_detail_rl_titlebar"
+        layout="@layout/titlebar_back" />
+
+    <!-- 中间 -回答列表 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/asks_detail_rl_bottom"
+        android:layout_below="@+id/asks_detail_rl_titlebar" >
+
+        <com.zj.support.widget.refresh.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/asks_detail_listview"
+            style="@style/list_refresh_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="#00000000"
+            ptr:ptrAnimationStyle="rotate"
+            ptr:ptrMode="both" />
+    </RelativeLayout>
+
+    <!-- 底部 -->
+
+
+    <!-- 我来回答 -->
+
+    <Button
+        android:id="@+id/asks_detail_rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_36"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/main_color"
+        android:onClick="onClickAnswerMe"
+        android:text="@string/asks_answer_me"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</com.zj.support.widget.swipeback.SwipeBackRelativeLayout>

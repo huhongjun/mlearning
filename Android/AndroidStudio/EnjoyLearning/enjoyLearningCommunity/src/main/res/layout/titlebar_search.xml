@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titleLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_color" >
+
+    <TextView
+        android:id="@+id/titlebar_search_tv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onBtnBackClick"
+        android:padding="@dimen/margin_8"
+        android:text="@string/cancle"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_tv_level" />
+
+    <TextView
+        android:id="@+id/titlebar_search_tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onClicksearchBtn"
+        android:padding="@dimen/margin_8"
+        android:text="@string/find"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_tv_level" />
+
+    <EditText
+        android:id="@+id/titlebar_search_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_toLeftOf="@+id/titlebar_search_tv_right"
+        android:layout_toRightOf="@+id/titlebar_search_tv_search"
+        android:background="@drawable/common_search_et_bg_normal"
+        android:gravity="center_vertical"
+        android:hint="@string/find_memo"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="@color/detail_black_color"
+        android:textColorHint="@color/detail_gray_color"
+        android:textSize="@dimen/list_second_level" />
+
+</RelativeLayout>

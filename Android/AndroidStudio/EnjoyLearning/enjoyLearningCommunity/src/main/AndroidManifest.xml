@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zj.learning"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name="com.zj.learning.CoreApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.zj.learning.control.common.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 登录 -->
+        <activity
+            android:name="com.zj.learning.control.common.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <!-- 注册 -->
+        <activity
+            android:name="com.zj.learning.control.common.RegisterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 课程详情 -->
+        <activity
+            android:name="com.zj.learning.control.course.CourseDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 提问问题 -->
+        <activity
+            android:name="com.zj.learning.control.asks.AsksAddActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 搜索问题 -->
+        <activity
+            android:name="com.zj.learning.control.asks.AsksFindActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 回答评论列表 -->
+        <activity
+            android:name="com.zj.learning.control.asks.AnswerCommentListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 课程章节 -->
+        <activity
+            android:name="com.zj.learning.control.course.CourseSectionListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <!-- 课程视频播放-离线 -->
+        <activity
+            android:name="com.zj.learning.control.course.video.VideoOfflineActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <!-- 课程视频播放-在线 -->
+        <activity
+            android:name="com.zj.learning.control.course.video.VideoOnlineActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <!-- 考试/作业列表 -->
+        <activity
+            android:name="com.zj.learning.control.course.ResourceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <!-- 作业/考试 -->
+        <activity
+            android:name="com.zj.learning.control.course.ResourceDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 作业/考试 报告页面 -->
+        <activity
+            android:name="com.zj.learning.control.course.exam.AnswerResultActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 课程评价列表 -->
+        <activity
+            android:name="com.zj.learning.control.course.CourseReviewListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 添加课程评价 -->
+        <activity
+            android:name="com.zj.learning.control.course.CourseReviewAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <!-- 课程搜索 -->
+        <activity
+            android:name="com.zj.learning.control.course.CourseSeachListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <!-- 视频观看记录 -->
+        <activity
+            android:name="com.zj.learning.control.course.CourseRecordListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <!-- 问答详情 -->
+        <activity
+            android:name="com.zj.learning.control.asks.AsksDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 发表帖子 -->
+        <activity
+            android:name="com.zj.learning.control.forum.ForumPostsAddActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 论坛帖子详情 -->
+        <activity
+            android:name="com.zj.learning.control.forum.ForumDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <!-- 帖子评论列表 -->
+        <activity
+            android:name="com.zj.learning.control.forum.ForumCommentListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 单个标签帖子列表 -->
+        <activity
+            android:name="com.zj.learning.control.forum.ForumListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的课程/我关注的课程 -->
+        <activity
+            android:name="com.zj.learning.control.user.UserCourseIndexActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 核心服务 -->
+        <service android:name="com.zj.learning.content.CoreService" >
+        </service>
+    </application>
+
+</manifest>

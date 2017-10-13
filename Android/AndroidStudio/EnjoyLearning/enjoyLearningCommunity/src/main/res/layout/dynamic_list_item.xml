@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.learning.view.dynamic.DynamicItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:paddingLeft="@dimen/margin_16"
+    android:paddingRight="@dimen/margin_16" >
+
+    <include layout="@layout/common_list_item_left" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 内容 -->
+
+        <TextView
+            android:id="@+id/dynamic_list_item_tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:paddingTop="@dimen/margin_8"
+            android:text="您回答了一个问题    什么是快乐"
+            android:textColor="@color/dynamic_list_text_first_selector"
+            android:textSize="@dimen/list_first_level" />
+
+        <!-- 时间 -->
+
+        <TextView
+            android:id="@+id/dynamic_list_item_tv_time"
+            style="@style/common_list_tv_second_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:paddingBottom="@dimen/margin_8"
+            android:singleLine="true"
+            android:text="3分钟前" />
+    </LinearLayout>
+
+</com.zj.learning.view.dynamic.DynamicItemView>

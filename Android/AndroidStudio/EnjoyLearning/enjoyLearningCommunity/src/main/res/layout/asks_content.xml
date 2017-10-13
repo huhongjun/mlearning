@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <TextView
+        android:id="@+id/asks_content_tv_desc"
+        style="@style/common_list_tv_first_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:maxLines="2" />
+
+    <!-- 缩略图 -->
+
+    <com.zj.support.widget.ZjImageView
+        android:id="@+id/asks_content_iv_thumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher" />
+
+    <!-- 评论数 -->
+
+    <TextView
+        android:id="@+id/asks_content_tv_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="@dimen/margin_8"
+        android:singleLine="true"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="gone" />
+
+</LinearLayout>

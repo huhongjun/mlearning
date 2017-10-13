@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="mainColor">#64cd9b</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="blackColor">#000000</color>
+    <color name="grayColor">#727272</color>
+    <color name="video_tip_color">#ffff00</color>
+
+</resources>

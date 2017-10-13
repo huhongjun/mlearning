@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <FrameLayout
+        android:id="@+id/user_show_fr_avator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <!-- 缩略图 -->
+
+        <com.zj.support.widget.ZjImageView
+            android:id="@+id/user_show_iv_avator"
+            style="@style/iv_avator_thumb_style" >
+        </com.zj.support.widget.ZjImageView>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/user_show_tv_name"
+        style="@style/common_list_tv_first_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_8"
+        android:layout_toRightOf="@+id/user_show_fr_avator"
+        android:singleLine="true"
+        android:textColor="@color/posts_item_first_color" />
+
+    <TextView
+        android:id="@+id/user_show_tv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_show_fr_avator"
+        android:layout_alignLeft="@+id/user_show_tv_name"
+        android:layout_below="@+id/user_show_tv_name"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_toRightOf="@+id/user_show_fr_avator"
+        android:background="@drawable/asks_avator_level_bg_selected"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_8"
+        android:paddingRight="@dimen/margin_8"
+        android:text="秀才"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/list_second_level" />
+
+    <TextView
+        android:id="@+id/user_show_tv_time"
+        style="@style/common_list_tv_second_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="1分钟前" />
+
+</RelativeLayout>

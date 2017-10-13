@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zj.learning.view.course.CourseReviewItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_8"
+    android:paddingLeft="@dimen/margin_16"
+    android:paddingRight="@dimen/margin_16"
+    android:paddingTop="@dimen/margin_8" >
+
+    <include
+        android:id="@+id/course_review_list_item_rl_user"
+        layout="@layout/user_show_course_review" />
+
+    <TextView
+        android:id="@+id/course_review_list_item_tv_desc"
+        style="@style/detail_tv_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/course_review_list_item_rl_user"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="感谢分享，学习了，以前总觉得自己笨，看完发现可能是我的学习方法不对，(*^__^*) 嘻嘻" />
+
+</com.zj.learning.view.course.CourseReviewItemView>

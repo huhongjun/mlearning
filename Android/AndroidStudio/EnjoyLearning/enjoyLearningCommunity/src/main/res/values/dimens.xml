@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_36">36dp</dimen>
+    <dimen name="titlebar_height">44dp</dimen>
+    <dimen name="bottombar_height">48dp</dimen>
+    <dimen name="title_tv_level">16sp</dimen>
+    <dimen name="list_first_level">16sp</dimen>
+    <dimen name="list_second_level">14sp</dimen>
+    <dimen name="input_level">@dimen/list_second_level</dimen>
+    <dimen name="detail_title_level">@dimen/list_first_level</dimen>
+    <dimen name="detail_level">@dimen/list_second_level</dimen>
+    <dimen name="tips_tv_size">@dimen/list_second_level</dimen>
+    <dimen name="thumb_avator_width">48dp</dimen>
+    <dimen name="thumb_avator_height">@dimen/thumb_avator_width</dimen>
+    <dimen name="user_avator_width">48dp</dimen>
+    <dimen name="user_avator_height">@dimen/user_avator_width</dimen>
+    <dimen name="radius">45dp</dimen>
+    <dimen name="stroke_width">1dp</dimen>
+    <dimen name="divider_width">0.5dp</dimen>
+    <dimen name="user_top_height">120dp</dimen>
+
+</resources>

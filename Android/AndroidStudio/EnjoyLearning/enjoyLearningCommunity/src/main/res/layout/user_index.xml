@@ -1,0 +1,287 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/course_detail_sv_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fadingEdge="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 上边 -->
+
+        <RelativeLayout
+            android:id="@+id/user_index_rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color" >
+
+            <!-- 设置 -->
+
+            <TextView
+                android:id="@+id/user_index_tv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/title_tv_bg_selector"
+                android:padding="@dimen/margin_8"
+                android:singleLine="true"
+                android:text="@string/setting"
+                android:textColor="@color/titlebar_tv_selector"
+                android:textSize="@dimen/list_first_level" />
+
+            <!-- 登录之前的用户信息 -->
+
+            <RelativeLayout
+                android:id="@+id/user_index_rl_user_info_before"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                android:duplicateParentState="true" >
+
+                <FrameLayout
+                    android:id="@+id/user_index_fr_avator_before"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" >
+
+                    <!-- 默认头像 -->
+
+                    <ImageView
+                        android:id="@+id/user_index_iv_avator_before"
+                        style="@style/iv_avator_user_style" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/user_index_tv_unlogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_index_fr_avator_before"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/user_index_unlogin"
+                    android:textColor="@color/titlebar_tv_selector"
+                    android:textSize="@dimen/title_tv_level" />
+            </RelativeLayout>
+
+            <!-- 登录之后的用户信息 -->
+
+            <RelativeLayout
+                android:id="@+id/user_index_rl_user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_index_tv_setting"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                android:visibility="gone" >
+
+                <FrameLayout
+                    android:id="@+id/user_index_fr_avator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <!-- 用户头像 -->
+
+                    <com.zj.support.widget.ZjImageView
+                        android:id="@+id/user_index_iv_avator"
+                        style="@style/iv_avator_user_style" >
+                    </com.zj.support.widget.ZjImageView>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_toRightOf="@+id/user_index_fr_avator"
+                    android:orientation="vertical" >
+
+                    <!-- 用户名 -->
+
+                    <TextView
+                        android:id="@+id/user_index_tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="张三"
+                        android:textColor="@color/titlebar_tv_selector"
+                        android:textSize="@dimen/list_first_level" />
+
+                    <!-- 等级/积分 -->
+
+                    <TextView
+                        android:id="@+id/user_index_tv_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:singleLine="true"
+                        android:text="平民（892积分）"
+                        android:textColor="@color/titlebar_tv_selector"
+                        android:textSize="@dimen/list_second_level" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 距离下一个等级积分 -->
+
+            <TextView
+                android:id="@+id/user_index_tv_next_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/user_index_rl_user_info"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/user_index_rl_user_info"
+                android:layout_marginTop="@dimen/margin_16"
+                android:paddingBottom="@dimen/margin_8"
+                android:singleLine="true"
+                android:text="距离社区秀才108积分"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/list_second_level"
+                android:visibility="gone" />
+
+            <!-- 证书专区 -->
+
+            <TextView
+                android:id="@+id/user_index_tv_cetificate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/user_index_rl_user_info_before"
+                android:background="@drawable/title_tv_bg_selector"
+                android:padding="@dimen/margin_8"
+                android:singleLine="true"
+                android:text="@string/user_index_cetificate"
+                android:textColor="@color/titlebar_tv_selector"
+                android:textSize="@dimen/list_first_level" />
+        </RelativeLayout>
+
+        <!-- 下边 -->
+        <!-- 我的下载 -->
+
+        <RelativeLayout
+            android:id="@+id/user_index_rl_download_me"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/user_index_click_selector"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_8" 
+            android:visibility="gone">
+
+            <TextView
+                style="@style/user_index_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:text="@string/user_index_download" />
+
+            <ImageView
+                style="@style/more_iv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!-- 我的课程/我关注的课程 -->
+
+        <RelativeLayout
+            android:id="@+id/user_index_rl_course_focus_me"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/user_index_click_selector"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_8" >
+
+            <TextView
+                style="@style/user_index_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:text="@string/user_index_course_user" />
+
+            <ImageView
+                style="@style/more_iv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!-- 我的提问/回答 -->
+
+        <RelativeLayout
+            android:id="@+id/user_index_rl_asks_me"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/user_index_click_selector"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_8" >
+
+            <TextView
+                style="@style/user_index_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:text="@string/user_index_asks_me" />
+
+            <ImageView
+                style="@style/more_iv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!-- 我的帖子/参与帖子 -->
+
+        <RelativeLayout
+            android:id="@+id/user_index_rl_forum_me"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/user_index_click_selector"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_8" >
+
+            <TextView
+                style="@style/user_index_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:text="@string/user_index_forum_me" />
+
+            <ImageView
+                style="@style/more_iv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!-- 我的证书 -->
+
+        <RelativeLayout
+            android:id="@+id/user_index_rl_cetificate_me"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/user_index_click_selector"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_8" >
+
+            <TextView
+                style="@style/user_index_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:text="@string/user_index_cetificate_me" />
+
+            <ImageView
+                style="@style/more_iv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhijin.mlearning.app.view.itemview.CourseSectionItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/defaultPic"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/course_default" />
+
+    <RelativeLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@id/defaultPic" >
+
+        <TextView
+            android:id="@+id/Course_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/blackColor"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/descLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Course_Name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp" >
+
+            <TextView
+                android:id="@+id/Course_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textColor="@color/grayColor"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/timeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/descLayout"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/courseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timeLength"
+                android:textColor="@color/grayColor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/Course_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/courseTime"
+                android:textColor="@color/grayColor"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/arrow_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/more" />
+
+</com.zhijin.mlearning.app.view.itemview.CourseSectionItemView>

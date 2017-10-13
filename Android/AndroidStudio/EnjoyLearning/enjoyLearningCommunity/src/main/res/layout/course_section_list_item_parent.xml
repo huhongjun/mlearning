@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/margin_8"
+    android:paddingRight="@dimen/margin_8" >
+
+    <include
+        android:id="@+id/course_section_list_item_fl_left"
+        layout="@layout/common_list_item_left" />
+
+    <!-- 章名 -->
+
+    <TextView
+        android:id="@+id/course_section_list_item_parent_tv_name"
+        style="@style/common_list_tv_first_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/margin_8"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:text="第一章   Android概述" 
+        android:textStyle="bold"/>
+
+    <!-- 小节数 -->
+
+    <TextView
+        android:id="@+id/course_section_list_item_parent_tv_count"
+        style="@style/common_list_tv_second_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="5小节" />
+
+</LinearLayout>
